@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html ng-app="appTodo">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>todo app</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="core.js"></script>
+
+</head>
+<body ng-controller="mainController">
+    <form>
+        <div class="form-group">
+            <input type="text" class="text-center" placeholder="Please, add new todo list" ng-model="formData.name">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" ng-click="createList()">Add new list</button>
+    </form>
+    <div class="container">
+        <div class="lists">
+          <div class="list" ng-repeat="list in lists">
+            <div class="list-item" ng-class="{editing: list == editedList}">
+                <div ng-show="isChecked">
+                  <input type="text" value="{{ list.name }}" ng-model="list.name">
+                </div>
+                <div ng-dblclick="editTodoListName(list)">
+                  {{ list.name }}
+                </div>
+                <form id="editform" ng-submit="saveEdits(list, list._id)">
+								  <input class="edit" ng-model="list.name">
+							  </form>
+                <span class="delete-span" ng-click="deleteList(list._id)">Удалить TODO-лист</span>
+                <!-- <input type="checkbox" ng-model="isChecked"><span>Включить режим редактирования</span> -->
+                <div class="todos" ng-repeat="todo in list.tasks">
+                  <label>
+                    <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo }}
+                  </label>
+                </div>
+                <form>
+                    <input type="text" placeholder="Please, add new task" ng-model="newTodo">
+                    <button type="submit" class="btn" ng-click="addTask(newTodo, list._id)">Add new task</button>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
