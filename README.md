@@ -12,7 +12,7 @@ This project implements a simple todo task manager. Build on node + mongoDB + an
 ## How install
 
 1. Clone the repository: `https://github.com/orlovmaxxim/todo-angular-mongo-node.git`
-2. Install np packages: `npm install`
+2. Install npm packages: `npm install`
 3. Place your own MongoDB URI in `config/database.js`
 4. Start mongod
 5. Start the server: `npm start`
