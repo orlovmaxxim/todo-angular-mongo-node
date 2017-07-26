@@ -2,6 +2,16 @@ html { overflow-y:scroll; }
 body { padding-top:50px; }
 #todo-list { margin-bottom:30px; }
 
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit-list {
+  margin-bottom: 15px; 
+}
+
 .delete-span {
   cursor: pointer;
   color: cadetblue;

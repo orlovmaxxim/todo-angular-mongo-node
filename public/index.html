@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>todo app</title>
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
@@ -14,8 +13,10 @@
     <script src="core.js"></script>
 
 </head>
-<body ng-controller="mainController">
-    <form>
+<body class="wrap" ng-controller="mainController">
+    <h2>Todo app</h2>
+    <p>to edit the name of Tudu list - double click on the name and enter submit</p>
+    <form class="submit-list">
         <div class="form-group">
             <input type="text" class="text-center" placeholder="Please, add new todo list" ng-model="formData.name">
         </div>
