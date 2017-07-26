@@ -1,0 +1,40 @@
+html { overflow-y:scroll; }
+body { padding-top:50px; }
+#todo-list { margin-bottom:30px; }
+
+.delete-span {
+  cursor: pointer;
+  color: cadetblue;
+}
+
+.lists {
+  display: flex;
+}
+
+.list {
+  width: 300px;
+  height: 300px;
+  margin-right: 10px;
+  background-color: blanchedalmond;
+}
+
+.list-item {
+  position: relative;
+  text-align: center;
+}
+
+.list-item #editform {
+  display: none;
+}
+
+.editing {
+  color: red;
+}
+
+.list-item.editing #editform {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  transform: translateX(-50%);
+}
