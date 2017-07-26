@@ -1,0 +1,13 @@
+{
+  "name"         : "todo-angular-node",
+  "version"      : "0.0.1",
+  "description"  : "todo angular node",
+  "main"         : "server.js",
+  "dependencies" : {
+    "express"        : "4.15.3",
+    "mongoose"       : "4.11.4",
+    "body-parser"    : "1.17.2",
+    "method-override": "2.1.2",
+    "morgan"         : "1.2.2"
+    }
+}
